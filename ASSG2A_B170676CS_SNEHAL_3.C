@@ -1,7 +1,7 @@
 #include<stdio.h>
 struct matrix
 {
-int arr[50][50];
+int array[50][50];
 };
 
 struct matrix read( int p, int q)
@@ -10,7 +10,7 @@ int i,j;
 printf("Input array elements\n");
 for( i=0; i< p; i++)
  for( j=0; j< q; j++)
-    scanf("%d", &(x.arr[i][j]));
+    scanf("%d", &(x.array[i][j]));
 
  return x;
 }
@@ -19,7 +19,7 @@ void print(struct matrix z,int e1,int e2)
 { int i,j;
 for( i=0; i< e1; i++)
  {for( j=0; j< e2; j++)
-    printf(" %d ", z.arr[i][j]);
+    printf(" %d ", z.array[i][j]);
     printf("\n");
 }
 }
@@ -29,7 +29,7 @@ struct matrix sum(struct matrix k,struct matrix t,int l1,int l2)
   struct matrix s;
  for( i=0; i< l1; i++)
    for( j=0; j< l2; j++)
-    s.arr[i][j] = (k.arr[i][j] + t.arr[i][j]) ;
+    s.array[i][j] = (k.array[i][j] + t.array[i][j]) ;
 
 return (s);
 }
@@ -39,7 +39,7 @@ struct matrix sub(struct matrix g,struct matrix h,int w,int v)
   struct matrix d;
  for( i=0; i< w; i++)
    for( j=0; j< v; j++)
-    d.arr[i][j] = (g.arr[i][j] - h.arr[i][j]) ;
+    d.array[i][j] = (g.array[i][j] - h.array[i][j]) ;
 
 return(d);
 }
